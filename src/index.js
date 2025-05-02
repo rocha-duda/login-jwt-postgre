@@ -12,6 +12,11 @@ app.use(express.json());
 // Usar as rotas de autenticação
 app.use("/api/auth", authRoutes);
 
+// Rota padrão para testar a API
+app.get("/", (req, res) => {
+  res.send("API funcionando!");
+});
+
 // Configuração da porta do servidor
 const PORT = process.env.PORT || 5000;
 
